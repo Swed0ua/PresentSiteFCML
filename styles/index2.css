@@ -1,0 +1,158 @@
+/** Screen 3 **/
+
+.storage {
+    width: 50%;
+    height: 100vh;
+    float: left;
+}
+
+.storage__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+.mov {
+    transform: rotateX(50deg);
+    opacity: 0;
+}
+
+.movOp {
+    animation-duration: 3s;
+    animation-name: anim1;
+    opacity: 100%;
+}
+
+.cardGames {
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity ease-in 0.25s;
+}
+
+.cardGames>img {
+    width: 90px;
+    transform: scale(1);
+}
+
+.cardGames>img:hover {
+    transform: scale(1.1);
+}
+
+
+/** start Card Games position **/
+.cG_1 {
+    transform: translate3d(0px, -120px, 50px);
+}
+
+.cG_2 {
+    transform: translate3d(120px, -55px, 70px); 
+}
+
+.cG_3 {
+    transform: translate3d(40px, -60px, 70px); 
+}
+
+.cG_4 {
+    transform: translate3d(-40px, -60px, 70px); 
+}
+
+.cG_5 {
+    transform: translate3d(-120px, -55px, 70px); 
+}
+
+.cG_6 {
+    transform: translate3d(100px, 20px, 120px); 
+}
+
+.cG_7 {
+    transform: translate3d(0px, 20px, 120px); 
+}
+
+.cG_8 {
+    transform: translate3d(-100px, 20px, 120px); 
+}
+
+.cG_9 {
+    transform: translate3d(80px, 80px, 150px); 
+}
+
+.cG_10 {
+    transform: translate3d(-80px, 80px, 150px); 
+}
+
+.cG_11 {
+    transform: translate3d(0px, 100px, 180px); 
+}
+
+.rrr {
+    opacity: 100%;
+}
+/** end Card Games position**/
+
+
+/**Left scr_3**/
+.storage__left {
+    position: relative;
+}
+
+.openGameCard {
+    width: 80%;
+    height: 40%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 0%);
+    display: none;
+}
+
+.openGameCard__contentImg,
+.openGameCard__content {
+    width: 50%;
+    height: 100%;
+    float: left;
+    color: #E2D9D9;
+}
+
+.openGameCard__contentImg>img {
+    width: 250px;
+}
+
+.oGC__0>.openGameCard__contentImg>img {
+    width: 148px;
+}
+
+.oGC__0>.openGameCard__contentImg,
+.openGameCard__content {
+    margin-top: 60px;
+}
+
+
+
+.oGC__0 {
+    border: 3px solid #3E3B3B;
+    border-radius: 30px;
+    color: #3E3B3B;
+}
+
+.openGameCard__this {
+    display: block;
+}
+
+
+@keyframes anim1 {
+    0% {
+        transform: rotateX(0deg);
+        margin-right: -100vw;
+    }
+    80% {
+        transform: rotateX(0deg);
+        margin-right: 0;
+    }
+    100% {
+        transform: rotateX(50deg);
+        margin-right: 0;
+    }
+}

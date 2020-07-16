@@ -1,0 +1,214 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/** Screen settings **/
+.screen {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #2b2828;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen:nth-child(even) {
+  background-color: aqua;
+}
+
+/** Screen 1 **/
+#clock {
+  color: #4b4242;
+  position: absolute;
+  font-size: 64px;
+  bottom: 5%;
+  left: 5%;
+}
+
+.mainTitle {
+  color: #cebfbf;
+  text-align: center;
+  width: 100%;
+  height: 20%;
+  font-size: 80px;
+  font-weight: bold;
+  z-index: 10;
+  position: relative;
+}
+
+.mainTitle > span {
+  font-weight: lighter;
+}
+
+.descriptionText {
+  width: 100%;
+  height: 80%;
+}
+
+.descriptionText__left {
+  width: 50%;
+  height: 80%;
+  float: left;
+  color: #cebfbf;
+  font-size: 20px;
+  padding: 2% 2% 2% 5%;
+}
+
+.descriptionText__right {
+  width: 50%;
+  height: 100%;
+  float: left;
+  font-size: 25px;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #4b42427c;
+  font-weight: lighter;
+}
+
+/** Screen 2 **/
+
+.screen_2 {
+  background: url(../img/630_360_1536423341-4635.jpg) 0 0/100% auto no-repeat
+    fixed;
+}
+
+.eclipseBG {
+  width: 100%;
+  height: 100%;
+  background-color: #2b2828;
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.formTsh {
+  display: inline-block;
+  position: relative;
+  margin-top: 7vh;
+  cursor: help;
+}
+
+.formTsh > img {
+  width: 450px;
+  float: left;
+  position: relative;
+  z-index: 2;
+}
+
+.formTsh__bg {
+  width: 300px;
+  height: 500px;
+  background-color: #000000;
+  position: absolute;
+  margin-left: calc(50% - 150px);
+  margin-top: 50px;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.formTsh__bg > span {
+  position: relative;
+  top: 90%;
+  color: rosybrown;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.formTsh__bgDecor {
+  position: absolute;
+  width: 0;
+  left: 0;
+  height: 5px;
+  background-color: #077afe;
+  bottom: 0;
+  transition: width ease-in 0.3s;
+}
+
+.formTsh__bgDecorH  {
+  background-color: #6dff0d;
+}
+
+.formTsh:hover .formTsh__bgDecor {
+  width: 100%;
+}
+
+.homeForm {
+  margin-left: calc(50% - 450px);
+  top: 12px;
+}
+
+.homeForm > .formTsh__bg > span {
+  color: #6dff0d;
+}
+
+.guestForm > .formTsh__bg > span {
+  color: #077afe;
+}
+
+.form > img {
+  position: absolute;
+  z-index: 15;
+  left: 60px;
+  top: -15px;
+  transform: scale(0.8);
+  transition: transform ease-in 0.07s;
+}
+
+.formTsh:hover .form>img{
+  transform: scale(0.85);
+}
+
+@media screen and (max-width: 1195px){
+  .screen_2 {
+    background: url(../img/630_360_1536423341-4635.jpg) 0 0/auto 100%  no-repeat
+      fixed;
+  }
+}
+
+@media screen and (max-width: 924px){
+  .homeForm {
+    margin-left: calc(50% - 225px);
+    top: 0;
+    margin-bottom: 130px;
+    margin-top: 30px;
+  }
+
+  .guestForm {
+    margin-left: calc(50% - 225px);
+    margin-bottom: 130px;
+  }
+}
+
+@media screen and (max-width: 924px){
+  .mainTitle {
+    font-size: 46px;
+  }
+
+  .descriptionText__right {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .descriptionText__right {
+    font-size: 16px;
+  }
+  .descriptionText__left {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .mainTitle {
+    font-size: 32px;
+  }
+}
